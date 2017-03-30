@@ -4,6 +4,10 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
 	<display-name>web01</display-name>
+	<welcome-file-list>
+		<welcome-file>src/main/resources/static/index.html</welcome-file>
+	</welcome-file-list>
+	
 	<!-- ruta fichero -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -14,7 +18,7 @@
 	<!-- listener carga Spring -->
 	<listener>
 		<listener-class>
-			org.springframework.web.context.ContextLoaderListener
+			com.example.WebAppApplication
 		</listener-class>
 	</listener>
 	<!-- filtro de Spring security -->
