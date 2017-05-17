@@ -6,13 +6,17 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication
-@ComponentScan("user")
-@EntityScan(basePackages = { "user" }) @EnableJpaRepositories(basePackages = { "user" })
 
+
+@SpringBootApplication
+@ComponentScan({"user" ,"com.example"})
 public class WebAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WebAppApplication.class, args);
 	}
 }
+
+
+
+//@EntityScan(basePackages = { "user" }) @EnableJpaRepositories(basePackages = { "user" })
