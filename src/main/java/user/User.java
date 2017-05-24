@@ -2,7 +2,6 @@ package user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -12,7 +11,9 @@ public class User {
 	private String lastname ;
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue
+	private Long id ;
+	
 	private Long dni ;
 	
 	protected User (){}
@@ -40,6 +41,10 @@ public class User {
 	
 	public void setDni (Long dni){
 		this.dni = dni ;
+	}
+	
+	public Long getId (){
+		return id ;
 	}
 	
 }
