@@ -11,20 +11,16 @@ public class UserDTO {
 	@NotNull
 	private Long dni ;
 	
-	public String getName() {
-		return name;
-	}
-
 	public void setName(String name) {
 		this.name = name;
 	}
 
-	public String getLastname() {
-		return lastname;
-	}
-
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
+	}
+
+	public void setDni(Long dni) {
+		this.dni = dni;
 	}
 
 	public UserDTO(){}
